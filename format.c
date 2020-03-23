@@ -833,7 +833,7 @@ format_cb_current_path(struct format_tree *ft)
 	if (wp == NULL)
 		return (NULL);
 
-	cwd = osdep_get_cwd(wp->fd);
+	cwd = osdep_get_cwd(wp->pid);
 	if (cwd == NULL)
 		return (NULL);
 	return (xstrdup(cwd));
